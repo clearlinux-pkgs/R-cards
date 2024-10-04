@@ -6,10 +6,10 @@
 # autospec commit: f35655a
 #
 Name     : R-cards
-Version  : 0.2.2
-Release  : 2
-URL      : https://cran.r-project.org/src/contrib/cards_0.2.2.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/cards_0.2.2.tar.gz
+Version  : 0.3.0
+Release  : 3
+URL      : https://cran.r-project.org/src/contrib/cards_0.3.0.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/cards_0.3.0.tar.gz
 Summary  : Analysis Results Data
 Group    : Development/Tools
 License  : Apache-2.0
@@ -44,10 +44,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1726855955
+export SOURCE_DATE_EPOCH=1728053497
 
 %install
-export SOURCE_DATE_EPOCH=1726855955
+export SOURCE_DATE_EPOCH=1728053497
 rm -rf %{buildroot}
 LANG=C.UTF-8
 CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -126,6 +126,8 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/cards/tests/testthat/_snaps/ard_hierarchical.md
 /usr/lib64/R/library/cards/tests/testthat/_snaps/ard_missing.md
 /usr/lib64/R/library/cards/tests/testthat/_snaps/ard_stack.md
+/usr/lib64/R/library/cards/tests/testthat/_snaps/ard_stack_hierarchical.md
+/usr/lib64/R/library/cards/tests/testthat/_snaps/ard_strata.md
 /usr/lib64/R/library/cards/tests/testthat/_snaps/ard_total_n.md
 /usr/lib64/R/library/cards/tests/testthat/_snaps/as_card.md
 /usr/lib64/R/library/cards/tests/testthat/_snaps/as_nested_list.md
@@ -134,13 +136,16 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/cards/tests/testthat/_snaps/check_pkg_installed.md
 /usr/lib64/R/library/cards/tests/testthat/_snaps/eval_capture_conditions.md
 /usr/lib64/R/library/cards/tests/testthat/_snaps/get_ard_statistics.md
+/usr/lib64/R/library/cards/tests/testthat/_snaps/mock.md
 /usr/lib64/R/library/cards/tests/testthat/_snaps/print.md
 /usr/lib64/R/library/cards/tests/testthat/_snaps/print_ard_conditions.md
 /usr/lib64/R/library/cards/tests/testthat/_snaps/process_selectors.md
+/usr/lib64/R/library/cards/tests/testthat/_snaps/rename_ard_columns.md
 /usr/lib64/R/library/cards/tests/testthat/_snaps/round5.md
 /usr/lib64/R/library/cards/tests/testthat/_snaps/shift_ard_columns.md
 /usr/lib64/R/library/cards/tests/testthat/_snaps/shuffle_ard.md
 /usr/lib64/R/library/cards/tests/testthat/_snaps/tidy_as_ard.md
+/usr/lib64/R/library/cards/tests/testthat/_snaps/update_ard.md
 /usr/lib64/R/library/cards/tests/testthat/test-add_calculated_row.R
 /usr/lib64/R/library/cards/tests/testthat/test-apply_fmt_fn.R
 /usr/lib64/R/library/cards/tests/testthat/test-ard_attributes.R
@@ -151,6 +156,8 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/cards/tests/testthat/test-ard_hierarchical.R
 /usr/lib64/R/library/cards/tests/testthat/test-ard_missing.R
 /usr/lib64/R/library/cards/tests/testthat/test-ard_stack.R
+/usr/lib64/R/library/cards/tests/testthat/test-ard_stack_hierarchical.R
+/usr/lib64/R/library/cards/tests/testthat/test-ard_strata.R
 /usr/lib64/R/library/cards/tests/testthat/test-ard_total_n.R
 /usr/lib64/R/library/cards/tests/testthat/test-as_card.R
 /usr/lib64/R/library/cards/tests/testthat/test-as_nested_list.R
@@ -160,13 +167,16 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/cards/tests/testthat/test-eval_capture_conditions.R
 /usr/lib64/R/library/cards/tests/testthat/test-get_ard_statistics.R
 /usr/lib64/R/library/cards/tests/testthat/test-label_cards.R
+/usr/lib64/R/library/cards/tests/testthat/test-mock.R
 /usr/lib64/R/library/cards/tests/testthat/test-nest_for_ard.R
 /usr/lib64/R/library/cards/tests/testthat/test-print.R
 /usr/lib64/R/library/cards/tests/testthat/test-print_ard_conditions.R
 /usr/lib64/R/library/cards/tests/testthat/test-process_selectors.R
+/usr/lib64/R/library/cards/tests/testthat/test-rename_ard_columns.R
 /usr/lib64/R/library/cards/tests/testthat/test-replace_null_statistic.R
 /usr/lib64/R/library/cards/tests/testthat/test-round5.R
 /usr/lib64/R/library/cards/tests/testthat/test-selectors.R
 /usr/lib64/R/library/cards/tests/testthat/test-shift_ard_columns.R
 /usr/lib64/R/library/cards/tests/testthat/test-shuffle_ard.R
 /usr/lib64/R/library/cards/tests/testthat/test-tidy_as_ard.R
+/usr/lib64/R/library/cards/tests/testthat/test-update_ard.R
